@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click to Predict</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black; /* Set a black background color */
+            margin: 0;
+            padding: 0;
+            color: white; /* Set text color to white */
+        }
+
+        header {
+            background-color: #0074d9; /* Set a blue background color for the header */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: orange; /* Set the h1 text color to orange */
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+              /* Set a white background color for the section */
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        form label {
+            font-weight: bold;
+           /* Set label text color to white */
+        }
+
+        form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: skyblue; /* Set a blue background color for the submit button */
+             
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            background-color: black; /* Set a blue background color for the link */
+            
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 20px auto;
+            width: 200px;
+            border-radius: 5px;
+            text-align: center;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 align="center" backg>Please Enter The Following Geographical Details</h1>
+    </header>
+
+    <section>
+        <form action="/predict" method="POST">
+            <label for="Mcr">Monthly cloud recover in percent:</label>
+            <input type="number" id="Monthly_cloud_recover_in_percent" name="Monthly_cloud_recover_in_percent"
+                required>
+            <br>
+
+            <label for="temprature">Diurnal temperature Range in degrees Celcius:</label>
+            <input type="number" id="D_t_R" name="D_t_R" required>
+            <br>
+
+            <label for="freequency">Frost Day freequency in day:</label>
+            <input type="number" id="freequency" name="freequency" required>
+            <br>
+
+            <label for="evptr">Potential evapotranspiration in millimeters per day:</label>
+            <input type="number" id="evptr" name="evptr" required>
+            <br>
+
+            <label for="precpt">Precipitation is any product of the consideration of the water vapor in atmosphere
+                in millimeters per month:</label>
+            <input type="number" id="precpt" name="precpt" required>
+            <br>
+            <input type="submit" name="Submit">
+        </form>
+    </section>
+
+</body>
+
+</html>
